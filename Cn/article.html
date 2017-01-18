@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<title>article</title>
+<link type="text/css" rel="stylesheet" href="../Css/swiper.min.css">
+<link  type="text/css" rel="stylesheet" href="../Css/style.css">
+<style>
+		#wrapper {
+			position: absolute;
+			left: 0;
+			top: 50px;
+			bottom: 50px;
+			width: 100%;
+			background-color: #fafafa;
+			z-index: 10;
+		}
+		
+		#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+			-webkit-transition-property:-webkit-transform;
+			-webkit-transition-duration:250ms;
+		}
+		#pullDown .pullDownIcon {
+			-webkit-transform:rotate(0deg) translateZ(0);
+		}
+		#pullUp .pullUpIcon  {
+			-webkit-transform:rotate(-180deg) translateZ(0);
+		}
+
+		#pullDown.flip .pullDownIcon {
+			-webkit-transform:rotate(-180deg) translateZ(0);
+		}
+
+		#pullUp.flip .pullUpIcon {
+			-webkit-transform:rotate(0deg) translateZ(0);
+		}
+		#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+			background-position:0 100%;
+			-webkit-transform:rotate(0deg) translateZ(0);
+			-webkit-transition-duration:0ms;
+
+			-webkit-animation-name:loading;
+			-webkit-animation-duration:2s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-timing-function:linear;
+		}
+
+		
+
+		@-webkit-keyframes loading {
+			from { -webkit-transform:rotate(0deg) translateZ(0); }
+			to { -webkit-transform:rotate(360deg) translateZ(0); }
+		}
+</style>
+</head>
+
+<body>
+<nav class="content left-Anima">
+	<i class="ui-icon-close"></i>
+	<ul>
+    	<li><a href=""><i class="ui-icon-home"></i>首页</a></li>
+        <li><a href=""><i class="ui-icon-news"></i>港险资讯</a></li>
+        <li><a href=""><i class="ui-icon-pro"></i>全部产品</a></li>
+        <li><a href=""><i class="ui-icon-ques"></i>常见问题</a></li>
+        <li><a href=""><i class="ui-icon-hot"></i>热门专题</a></li>
+        <li><a href=""><i class="ui-icon-dz"></i>方案定制</a></li>
+        <li><a href=""><i class="ui-icon-qd"></i>渠道专区</a></li>
+        <li><a href=""><i class="ui-icon-person"></i>关于我们</a></li>
+    </ul>
+</nav>
+<div class="mm-slider" id="mm-slider"></div>
+
+
+<header class="pathHead clearfix">
+    <i class="ui-icon-back fl"></i>
+        产品资讯
+    <i class="ui-icon-nav slider-icon fr"></i>
+</header>
+<section class="main-wrap">
+   <div class="article-sort-block clearfix"><a class="on" href="">更新时间</a> <a href="">阅读热度</a></div>
+   <div id="wrapper">
+   		<div id="scroller">
+        	<div id="pullDown">
+				<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+			</div>
+        	<ul id="news-lists" class="article-list bacCor news-lists">
+                <li class="item">
+                    <h2><a href="">大陆人买香港保险弊端</a></h2>
+                    <p>在大家的印象中，香港是一个怎样的地方呢？大家去香港都是去干吗呢？比如东方之珠、购物天堂和时尚之都是大家为他起的名称。有许多人跑去香港旅游......</p>
+                </li>
+                <li class="item">
+                    <h2><a href="">大陆人买香港保险弊端</a></h2>
+                    <p>在大家的印象中，香港是一个怎样的地方呢？大家去香港都是去干吗呢？比如东方之珠、购物天堂和时尚之都是大家为他起的名称。有许多人跑去香港旅游......</p>
+                </li>
+                <li class="item">
+                    <h2><a href="">大陆人买香港保险弊端</a></h2>
+                    <p>在大家的印象中，香港是一个怎样的地方呢？大家去香港都是去干吗呢？比如东方之珠、购物天堂和时尚之都是大家为他起的名称。有许多人跑去香港旅游......</p>
+                </li>
+           </ul>
+           <div id="pullUp" class="arti-moreIcon"><span class="pullUpIcon"></span><span class="pullUpLabel">点击加载更多港险资讯</span></div>  
+        </div>
+   </div>    
+</section> 
+
+
+<footer>
+	<div class="home-hotline-block clearfix">
+    	<span class="a">客服热线<br/>（9:00-22:00）</span>
+        <span class="b">4000-172-672</span>
+        <span class="ui-icon-tel1"></span>
+    </div>
+    <div class="home-nav-link"><a href="">关于我们</a>｜<a href="">关注微信</a>｜<a href="">常见问题</a></div>
+    Copyright © 2016 有邦保险经纪（深圳）有限公司<br/>
+Baole.me Inc. All Rights Reserved.<br/>
+ 粤ICP备16103986号<br/>
+ <div class="fixed-footer clearfix">
+ 	<div class="fixed-footer-L"><i class="ui-icon-tel"></i>电话咨询 <a href="tel:4000172672">4000-172-672</a></div>
+    <div class="fixed-footer-R"><i class="ui-icon-hand"></i><a href="">产品太多,太难选!<br/><span>一键</span>专业为您定制方案</a></div>
+ </div>
+</footer>
+</body>
+</html>
+<script type="text/javascript" src="../Js/zepto.min.js"></script>
+<script type="text/javascript" src="../Js/common.js"></script>
+<script  type="text/javascript" src="../Js/iscroll.js"></script>
+<script>
+var data,
+		myScroll,
+		pullDownEl, pullDownOffset,
+		pullUpEl, pullUpOffset,
+		generatedCount = 0;
+
+	function pullDownAction () {
+		$.getJSON('/uploads/rs/200/ptvnx6ur/test.json', function (data, state) {
+			if (data && data.state == 1 && state == 'success') {
+				//本地测试，为了看到加载中效果故加上定时器
+				setTimeout(function () {
+					$('#news-lists').before(data.data);
+					myScroll.refresh();
+				}, 600);
+			}
+		});
+	}
+
+	function pullUpAction () {
+
+		$.getJSON('http://sandbox.runjs.cn/uploads/rs/200/ptvnx6ur/test.json', function (data, state) {
+			if (data && data.state == 1 && state == 'success') {
+				//本地测试，为了看到加载中效果故加上定时器
+				setTimeout(function () {
+					$('#news-lists').append(data.data);
+					myScroll.refresh();
+				}, 600);
+			}
+		});
+	}
+
+	//初始化绑定iScroll控件 
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+	document.addEventListener('DOMContentLoaded', loaded, false);
+
+	function loaded() {
+		pullDownEl = document.getElementById('pullDown');
+		pullDownOffset = pullDownEl.offsetHeight;
+		pullUpEl = document.getElementById('pullUp');	
+		pullUpOffset = pullUpEl.offsetHeight;
+		
+		/**
+		 * 初始化iScroll控件
+		 */
+		myScroll = new iScroll('wrapper', {
+			vScrollbar : false,
+			topOffset : pullDownOffset,
+			onRefresh : function () {
+				if (pullDownEl.className.match('loading')) {
+					pullDownEl.className = '';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+				} else if (pullUpEl.className.match('loading')) {
+					pullUpEl.className = '';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '上拉加载更多...';
+				}
+			},
+			onScrollMove: function () {
+				if (this.y > 5 && !pullDownEl.className.match('flip')) {
+					pullDownEl.className = 'flip';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '松手开始更新...';
+					this.minScrollY = 0;
+				} else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'flip';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '松手开始更新...';
+				}
+			},
+			onScrollEnd: function () {
+				if (pullDownEl.className.match('flip')) {
+					pullDownEl.className = 'loading';
+					pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';				
+					pullDownAction();
+				} else if (pullUpEl.className.match('flip')) {
+					pullUpEl.className = 'loading';
+					pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';				
+					pullUpAction();
+				}
+			}
+		});
+	}
+		</script>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="Keywords" content="">
+<meta name="description" content="">
+<title>insure</title>
+<link  type="text/css" rel="stylesheet" href="../Css/style.css">
+</head>
+
+<body>
+<nav class="content left-Anima">
+	<i class="ui-icon-close"></i>
+	<ul>
+    	<li><a href=""><i class="ui-icon-home"></i>首页</a></li>
+        <li><a href=""><i class="ui-icon-news"></i>港险资讯</a></li>
+        <li><a href=""><i class="ui-icon-pro"></i>全部产品</a></li>
+        <li><a href=""><i class="ui-icon-ques"></i>常见问题</a></li>
+        <li><a href=""><i class="ui-icon-hot"></i>热门专题</a></li>
+        <li><a href=""><i class="ui-icon-dz"></i>方案定制</a></li>
+        <li><a href=""><i class="ui-icon-qd"></i>渠道专区</a></li>
+        <li><a href=""><i class="ui-icon-person"></i>关于我们</a></li>
+    </ul>
+</nav>
+<div class="mm-slider" id="mm-slider"></div>
+
+
+<header class="pathHead clearfix">
+    <i class="ui-icon-back fl"></i>
+        保费测算
+    <i class="ui-icon-nav slider-icon fr"></i>
+</header>
+<section class="main-wrap insure-wrap">
+	<form>
+    	 <p>为了保障您的权益，请填写真实有效的信息，
+对于您的信息我们会严格保密。<span class="blue">（*为必填项）</span>。  </p>
+        <label><span class="blue">*</span> 姓名：</label>
+        <input type="text" required placeholder="（必填）请填写您的真实姓名" >
+        <label><span class="blue">*</span> 手机号码：</label>
+        <input type="tel" required placeholder="（必填）用于接收保单信息">
+        <label><span class="blue">*</span> 验证码：</label>
+        <div class="insure-row clearfix"><input style="width:48%;" class="fl" type="text" required placeholder="请输入正确的验证码"><img class="fr" title="点击更换验证码"  id="imVcode" style=" height:2em; line-height:2em; border:1px solid #a9a9a9; " onclick="this.src=this.src+'?t='+Math.random()" src="/insure/verify" />
+</div>
+        <span class="blue" style="line-height:1.4em; margin-top:.5rem; margin-bottom:.3rem; display:block;">我们将会通过上述方式，发送给您最合适的保单方案。</span>
+        <label>出生年月：</label>
+         <div class="insure-row">   
+            <select class="sel_year" name="year" rel="2000" style="margin-right:1%;">
+            
+            </select>
+            <select class="sel_month" name="month" rel="2">
+               
+            </select>
+        </div>
+        <label>所在城市：</label>
+        <input type="text" required placeholder="您所在的城市">
+        <div class="smoke-block clearfix">
+            <label class="fl" style="width:40%">平时是否吸烟：</label>
+            <label class="fl" style="width:20%;"><input type="radio" name="smoke" value="0">是</label>
+            <label class="fl" style="width:20%;"><input type="radio" name="smoke" value="1" checked>否</label>
+        </div>
+        <input type="submit" value="免费提交">
+       
+    </form>
+     <div class="sub-wran">我们将会在您提交信息之后的1个工作日之内与您联系。您也可以直接拨打<span class="blue">4000-172-672</span> 。</div>
+</section> 
+
+
+<footer>
+	<div class="home-hotline-block clearfix">
+    	<span class="a">客服热线<br/>（9:00-22:00）</span>
+        <span class="b">4000-172-672</span>
+        <span class="ui-icon-tel1"></span>
+    </div>
+    <div class="home-nav-link"><a href="">关于我们</a>｜<a href="">关注微信</a>｜<a href="">常见问题</a></div>
+    Copyright © 2016 有邦保险经纪（深圳）有限公司<br/>
+Baole.me Inc. All Rights Reserved.<br/>
+ 粤ICP备16103986号<br/>
+ <div class="fixed-footer clearfix">
+ 	<div class="fixed-footer-L"><i class="ui-icon-tel"></i>电话咨询 <a href="tel:4000172672">4000-172-672</a></div>
+    <div class="fixed-footer-R"><i class="ui-icon-hand"></i><a href="">产品太多,太难选!<br/><span>一键</span>专业为您定制方案</a></div>
+ </div>
+</footer>
+</body>
+</html>
+<script type="text/javascript" src="../Js/zepto.min.js"></script>
+<script type="text/javascript" src="../Js/common.js"></script>
+<script>
+	var i,j,m;
+	m=$('.sel_year').attr('rel');
+    for(i=1900;i<=2017;i++){
+		$('<option>'+i+'</option>').appendTo('.sel_year');
+		if(i==m){
+			$('<option selected>'+i+'</option>').appendTo('.sel_year');
+			}
+		}
+	for(j=1;j<=12;j++){
+		$('<option>'+j+'</option>').appendTo('.sel_month');
+		}
+</script>
