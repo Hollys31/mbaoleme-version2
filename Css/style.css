@@ -83,7 +83,7 @@ footer{ text-align:center; font-size:.85rem; line-height:1.6em; color:#666; padd
 .home-main-nav{ width:98%; padding:3% 1%; background:#fff;}
 .home-main-nav li{ width:25%; float:left; text-align:center;}
 .home-main-nav li a{ color:#353535; display: block;}
-.home-main-nav li .ui-bg{ background: #defffd; border-radius:50%; width:4rem; height: 4rem; line-height: 4rem;}
+.home-main-nav li .ui-bg{ background: #defffd; border-radius:50%; width:4rem; height: 4rem; line-height: 4rem; margin: 0 auto;}
 .home-main-nav li .ui-bg.down{ line-height: 4.7em;}
 .home-main-nav li i{  font-style: normal; color: #24a59d;}
 .home-main-nav li i.ui-icon-pro{font-size:2.2rem;}
