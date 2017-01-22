@@ -8,16 +8,46 @@
 <title>article</title>
 <link type="text/css" rel="stylesheet" href="../Css/swiper.min.css">
 <link  type="text/css" rel="stylesheet" href="../Css/style.css">
+</head>
+
+<body>
+<div id="shareImage" style="margin:0 auto;display:none;">
+	<img src="/Public/Home/Images/wxLogo.jpg">
+</div>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?267cc9ae7d0260d9ed5aabaa3cb8a1be";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<nav class="mm-slider1 clearfix left-Anima" id="mm-slider">
+	<div class="nav-left"></div>
+    <div class="nav-right">
+        <i class="ui-icon-close"></i>
+        <ul>
+            <li><a href="/index.php/index/index.html"><i class="ui-icon-home"></i>首页</a></li>
+            <li><a href="/index.php/article/index.html"><i class="ui-icon-news"></i>港险资讯</a></li>
+            <li><a href="/index.php/product/index.html"><i class="ui-icon-pro"></i>全部产品</a></li>
+            <li><a href="/index.php/problem/index/id/2347.html"><i class="ui-icon-ques"></i>常见问题</a></li>
+            <li><a href="/index.php/adver/advers.html"><i class="ui-icon-hot"></i>热门专题</a></li>
+            <li><a href="/index.php/product/insure.html"><i class="ui-icon-dz"></i>方案定制</a></li>
+            <li><a href="/index.php/league/league.html"><i class="ui-icon-qd"></i>渠道专区</a></li>
+            <li><a href="/index.php/about/index.html"><i class="ui-icon-person"></i>关于我们</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="mm-slider"></div>
+<header class="pathHead clearfix">
+    <a href="javascript:history.go(-1)"><i class="ui-icon-back fl"></i></a>
+        产品资讯    <i class="ui-icon-nav slider-icon fr"></i>
+</header>
+
 <style>
-		#wrapper {
-			position: absolute;
-			left: 0;
-			top: 50px;
-			bottom: 50px;
-			width: 100%;
-			background-color: #fafafa;
-			z-index: 10;
-		}
 		
 		#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
 			-webkit-transition-property:-webkit-transform;
@@ -37,6 +67,7 @@
 		#pullUp.flip .pullUpIcon {
 			-webkit-transform:rotate(0deg) translateZ(0);
 		}
+
 		#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
 			background-position:0 100%;
 			-webkit-transform:rotate(0deg) translateZ(0);
@@ -48,83 +79,107 @@
 			-webkit-animation-timing-function:linear;
 		}
 
-		
-
 		@-webkit-keyframes loading {
 			from { -webkit-transform:rotate(0deg) translateZ(0); }
 			to { -webkit-transform:rotate(360deg) translateZ(0); }
 		}
 </style>
-</head>
 
-<body>
-<nav class="content left-Anima">
-	<i class="ui-icon-close"></i>
-	<ul>
-    	<li><a href=""><i class="ui-icon-home"></i>首页</a></li>
-        <li><a href=""><i class="ui-icon-news"></i>港险资讯</a></li>
-        <li><a href=""><i class="ui-icon-pro"></i>全部产品</a></li>
-        <li><a href=""><i class="ui-icon-ques"></i>常见问题</a></li>
-        <li><a href=""><i class="ui-icon-hot"></i>热门专题</a></li>
-        <li><a href=""><i class="ui-icon-dz"></i>方案定制</a></li>
-        <li><a href=""><i class="ui-icon-qd"></i>渠道专区</a></li>
-        <li><a href=""><i class="ui-icon-person"></i>关于我们</a></li>
-    </ul>
-</nav>
-<div class="mm-slider" id="mm-slider"></div>
-
-
-<header class="pathHead clearfix">
-    <i class="ui-icon-back fl"></i>
-        产品资讯
-    <i class="ui-icon-nav slider-icon fr"></i>
-</header>
 <section class="main-wrap">
-   <div class="article-sort-block clearfix"><a class="on" href="">更新时间</a> <a href="">阅读热度</a></div>
+   <div class="article-sort-block clearfix">
+	   <a class="on" href="/index.php/article/index.html">更新时间</a> 
+	   <a href="/index.php/article/index/order/2.html">阅读热度</a>
+   </div>
    <div id="wrapper">
    		<div id="scroller">
-        	<div id="pullDown">
-				<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
-			</div>
+        	
         	<ul id="news-lists" class="article-list bacCor news-lists">
-                <li class="item">
-                    <h2><a href="">大陆人买香港保险弊端</a></h2>
-                    <p>在大家的印象中，香港是一个怎样的地方呢？大家去香港都是去干吗呢？比如东方之珠、购物天堂和时尚之都是大家为他起的名称。有许多人跑去香港旅游......</p>
-                </li>
-                <li class="item">
-                    <h2><a href="">大陆人买香港保险弊端</a></h2>
-                    <p>在大家的印象中，香港是一个怎样的地方呢？大家去香港都是去干吗呢？比如东方之珠、购物天堂和时尚之都是大家为他起的名称。有许多人跑去香港旅游......</p>
-                </li>
-                <li class="item">
-                    <h2><a href="">大陆人买香港保险弊端</a></h2>
-                    <p>在大家的印象中，香港是一个怎样的地方呢？大家去香港都是去干吗呢？比如东方之珠、购物天堂和时尚之都是大家为他起的名称。有许多人跑去香港旅游......</p>
-                </li>
-           </ul>
+                <li class="item" id="obj_1">
+                    <h2><a href="/index.php/article/article/id/2318.html">香港友邦AIA进泰安心保条款...</a></h2>
+                    <p>AIA友邦保险进泰安心保覆盖广泛的疾病及治疗，在早期的危疾阶段能给予您全方......</p>
+                </li><li class="item" id="obj_2">
+                    <h2><a href="/index.php/article/article/id/2319.html">友邦保险公司继进泰安心保|最新...</a></h2>
+                    <p>「进泰安心保2」是友邦保险公司继「进泰安心保」之后，而推出的一款分红保......</p>
+                </li><li class="item" id="obj_3">
+                    <h2><a href="/index.php/article/article/id/2320.html">友邦进泰安心保100万保障计划案...</a></h2>
+                    <p>香港友邦进泰安心保100(25年缴费)是一个具备人寿与危疾保障的保险产品。可以......</p>
+                </li><li class="item" id="obj_4">
+                    <h2><a href="/index.php/article/article/id/2321.html">加裕倍安保与危疾终身保比较？...</a></h2>
+                    <p>香港友邦全面升级了重疾险产品，所以加裕倍安保推出之后，已超过了市场现存......</p>
+                </li><li class="item" id="obj_5">
+                    <h2><a href="/index.php/article/article/id/2322.html">美国大都会耀光保险和友邦充裕...</a></h2>
+                    <p>美国大都会耀光保险和友邦充裕未来哪个好？充裕未来是香港友邦保险推出的一......</p>
+                </li><li class="item" id="obj_6">
+                    <h2><a href="/index.php/article/article/id/2313.html">香港保险之儿童教育基金对比分...</a></h2>
+                    <p>购买储蓄型的儿童教育基金，是父母理财大计重要组成部分。在香港购买储蓄型......</p>
+                </li><li class="item" id="obj_7">
+                    <h2><a href="/index.php/article/article/id/2314.html">耀光储蓄计划是什么产品？...</a></h2>
+                    <p>大都会人寿是美国联邦政府指定的承保公司，也是美国最大的人寿保险公司之一......</p>
+                </li><li class="item" id="obj_8">
+                    <h2><a href="/index.php/article/article/id/2315.html">耀光计划怎么投资？...</a></h2>
+                    <p>大都会人寿公司为个人用户提供人寿保险、年金、汽车以及家居保险、零售银行......</p>
+                </li><li class="item" id="obj_9">
+                    <h2><a href="/index.php/article/article/id/2316.html">美国大都会耀光保险分红储蓄...</a></h2>
+                    <p>说到储蓄分红险的时候，首先，大家都会想到隽升、充裕未来。下面，小编来给......</p>
+                </li><li class="item" id="obj_10">
+                    <h2><a href="/index.php/article/article/id/2317.html">美国友邦进泰安心保这么强的原...</a></h2>
+                    <p>香港保险比内地保险更优势，保额相同的情况下，香港保险保费比较低、回报率......</p>
+                </li>           </ul>
            <div id="pullUp" class="arti-moreIcon"><span class="pullUpIcon"></span><span class="pullUpLabel">点击加载更多港险资讯</span></div>  
         </div>
    </div>    
 </section> 
 
-
 <footer>
 	<div class="home-hotline-block clearfix">
-    	<span class="a">客服热线<br/>（9:00-22:00）</span>
+    	<span class="a">客服热线<br>（9:00-22:00）</span>
         <span class="b">4000-172-672</span>
         <span class="ui-icon-tel1"></span>
     </div>
-    <div class="home-nav-link"><a href="">关于我们</a>｜<a href="">关注微信</a>｜<a href="">常见问题</a></div>
-    Copyright © 2016 有邦保险经纪（深圳）有限公司<br/>
-Baole.me Inc. All Rights Reserved.<br/>
- 粤ICP备16103986号<br/>
+    <div class="home-nav-link"><a href="/index.php/about/index.html">关于我们</a>｜<a href="/index.php/about/wechat.html">关注微信</a>｜<a href="/index.php/problem/index/id/2347.html">常见问题</a></div>
+    Copyright @ 2016 有邦保险经纪（深圳）有限公司<br>
+Baole.me Inc. All Rights Reserved.<br>
+ 粤ICP备16103986号<br>
  <div class="fixed-footer clearfix">
- 	<div class="fixed-footer-L"><i class="ui-icon-tel"></i>电话咨询 <a href="tel:4000172672">4000-172-672</a></div>
-    <div class="fixed-footer-R"><i class="ui-icon-hand"></i><a href="">产品太多,太难选!<br/><span>一键</span>专业为您定制方案</a></div>
+ 	<div class="fixed-footer-L"><a href="tel:4000172672"><i class="ui-icon-tel"></i></a>电话咨询 <a href="tel:4000172672">4000-172-672</a></div>
+    <div class="fixed-footer-R"><i class="ui-icon-hand"></i><a href="/index.php/product/insure.html">产品太多,太难选!<br><span>一键</span>专业为您定制方案</a></div>
  </div>
 </footer>
-</body>
+
+
+<script type="text/javascript" src="/Public/Home/Js/zepto.min.js"></script>
+<script type="text/javascript" src="/Public/Home/Js/layout.js"></script>
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?267cc9ae7d0260d9ed5aabaa3cb8a1be";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- 商务通 -->
+<script language="javascript" src="http://pgt.zoosnet.net/JS/LsJS.aspx?siteid=PGT11155657&amp;float=1&amp;lng=cn"></script><link href="http://pgt.zoosnet.net/js/JS5.css" rel="stylesheet" type="text/css"><div id="LRdiv0" style="display: block;"><div id="LRfloater0" style="z-index: 2147483647; position: fixed; right: 1px; top: 200px;"><div id="swtColse" style="width:20px; height:15px; top:0px; right:0px; position:absolute;background-image: url(http://pgt.zoosnet.net/LR/closeimg/7.gif);background-repeat: no-repeat;background-position: right top;cursor:pointer;" onclick="LR_Hidemobileinvite(0);onlinerIcon0.hidden();"></div><img title="" alt="" src="http://pgt.zoosnet.net/js/m_blue/1.gif" style="cursor:pointer" onclick="openZoosUrl('chatwin');"></div></div><div id="LRdiv1" style="display:none;"></div>
+
+<script type="text/javascript">
+$('#pullUp').click(function(){
+	var host = window.location.host;
+	//alert(url);
+	var b = 10;
+	var c = a*1+b*1;
+	var e = c*1-10*1;
+	//alert(c);
+	var d = 'http://'+host+'/index.php/article/index/limit/'+c+'/order/'+o+'.html#obj_'+e;
+	//alert(d); 
+	window.location.href=d;
+		
+	})
+</script><div id="LRdiv3" style="display: block;"><div id="LRfloater3" style="z-index: 2147483647; position: fixed; right: 0px; bottom: 0px;"><div id="LRMINIBar" class="LR_Mini_ICON" style="display: block; right: 15px; bottom: 30px;" onclick="lrminiMax();"><a class="LR-BTN" style="background-color: #00a6f1;"><span class="LR-ICON LR-ICON-CHAT1" id="LR-BTN-ICON"></span><span id="LR-CIRCLE" style="display: block; background-color: rgb(0, 166, 241);">1</span> </a><div id="LR-BUBBLE" style="display:none;cursor:pointer;right: 0;bottom: 30px;"><span class="LR-ICON" id="LR-BUBBLE-CLOSE" onclick="return closebarhtml(event);"></span><div id="LR-BUBBLE-INSIDE"><div id="LR-BUBBLE-title" style="display: block;"><img id="LR-BUBBLE-AVATAR" src="http://www.baole.me/public/home/images/shangwutong.jpg"><span id="LR-BUBBLE-NAME">宝了么客服Cherry</span></div><div id="LR-BUBBLE-MSG">您好,我是宝了么客服Cherry,很高兴和您对话！</div></div></div></div></div></div><div id="LRdiv2" style="display:none;"><div id="LRfloater2" style="z-index: 2147483647; position: fixed; right: 0px; bottom: 0px; width: 100%; height: 600px;"><div style="width:100%; height:100%;display:block;" id="LRMINIWIN"><iframe id="LR_miniframe" name="LR_miniframe" width="100%" height="100%" frameborder="0" scrolling="No" allowtransparency="true" src="about:blank"></iframe></div></div></div></body>
+
 </html>
 <script type="text/javascript" src="../Js/zepto.min.js"></script>
-<script type="text/javascript" src="../Js/common.js"></script>
+<script type="text/javascript" src="../Js/layout.js"></script>
 <script  type="text/javascript" src="../Js/iscroll.js"></script>
 <script>
 var data,
