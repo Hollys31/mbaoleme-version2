@@ -82,8 +82,14 @@ footer{ text-align:center; font-size:.85rem; line-height:1.6em; color:#666; padd
 .swiper-slide img{ width:100%;display:block;}
 .home-main-nav{ width:98%; padding:3% 1%; background:#fff;}
 .home-main-nav li{ width:25%; float:left; text-align:center;}
-.home-main-nav li a{ color:#353535;}
-.home-main-nav li img{ width:70%;-webkit-animation: turn 2s ease-in-out;animation: turn 2s ease-in-out;}
+.home-main-nav li a{ color:#353535; display: block;}
+.home-main-nav li .ui-bg{ background: #defffd; border-radius:50%; width:4rem; height: 4rem; line-height: 4rem;}
+.home-main-nav li .ui-bg.down{ line-height: 4.7em;}
+.home-main-nav li i{  font-style: normal; color: #24a59d;}
+.home-main-nav li i.ui-icon-pro{font-size:2.2rem;}
+.home-main-nav li i.ui-icon-news{font-size:2.6rem;}
+.home-main-nav li i.ui-icon-dz{font-size:2.4rem;}
+.home-main-nav li i.ui-icon-qd{font-size:1.95rem;}
 .home-panel{ margin-top:1rem; background:#fff; -webkit-transform:translate(-100%,20px)}
 .home-panel.home-panelR{ -webkit-transform:translate(100%,20px)}
 .home-panel.anima{ -webkit-transform:translate(0,0);-webkit-transition:all .8s ease-in-out;}
