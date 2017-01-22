@@ -1,136 +1,112 @@
-// JavaScript Documentvar startPosition, endPosition, deltaX, deltaY, moveLength;  
-
-//公共  导航 
-$('.mm-slider').click(function(){
-	$('.mm-slider').hide();
-	$('nav').removeClass('anima');
-	$('nav').addClass('left-Anima');
-	})
-$('.slider-icon').click(function(){
-	$('.mm-slider').show();
-	$('nav').addClass('anima');
-	$('nav').removeClass('left-Anima');
-	})
-$('.ui-icon-close').click(function(){
-	$('.mm-slider').hide();
-	 $('nav').removeClass('anima');
-	 $('nav').addClass('left-Anima');
-	})
-//首页
-function indexAnima(){
-	$('.home-panel').each(function(index, element) {
-		var i=index,
-			height=$(window).height(),
-			scrollTop=$(window).scrollTop(),
-			top=$(this).offset().top;
-		if(top-scrollTop<=height){
-			$(this).addClass('anima');
-			}
-	});
-}
-indexAnima();
-//热门专题
-function hotAnima(){
-	$('.hotTopic li').each(function(index, element) {
-    var h=$(window).height(),
-	    scrollTop=$(window).scrollTop(),
-	    i=$(this).index();
-	var top= $(this).offset().top;
-	if(top-scrollTop<=h){
-		$(this).addClass('anima');
-		}
-	});
-}
-hotAnima();
-$(window).scroll(function(){
-	indexAnima();
-    //热门专题
-    hotAnima();
-})
-
-//产品
-var chick=0;
-$('.add-contrast').click(function(){
-	var html=$(this).html();
-	var title=$(this).attr('title');
-    var cp_add1=$('.compair-pro1 .cp_add').html();
-	var cp_add2=$('.compair-pro2  .cp_add').html();
-	if(chick<2 && html=="添加对比+"){
-		chick++;
-		$(this).html("添加对比-");
-		if(cp_add1=="您还可以继续<br>添加"&&html=="添加对比+"){
-			$('.compair-pro1 .cp_add').html(title).attr('id','cpdb_title_'+this.id);
-			$("<span class='del'>删除</span>").insertAfter('.compair-pro1 .cp_add').attr('id','cpdb_sc_'+this.id);
-			$(".cpdb_1").val(this.id).attr("id","cpdb_"+this.id);
-			}else if(cp_add2=="您还可以继续<br>添加"&&html=="添加对比+"){
-			$('.compair-pro2 .cp_add').html(title).attr('id','cpdb_title_'+this.id);
-			$("<span class='del'>删除</span>").insertAfter('.compair-pro2 .cp_add').attr('id','cpdb_sc_'+this.id);
-			$(".cpdb_2").val(this.id).attr("id","cpdb_"+this.id);
-			}	
-		}else if(html=="添加对比-"){
-			chick--;
-			$(this).html("添加对比+");
-			$("#cpdb_sc_"+this.id).remove();
-			$("#cpdb_title_"+this.id).html("您还可以继续<br>添加");
-			}else if(html=="添加对比+"){
-				alert("最多2款产品进行对比。");
-				}	
-	$('.cp_db_num').html(chick);
-	})
-function clearAll(){
-	$('.del').remove();
-	$('.cp_add').attr('id',"");
-	chick=0;
-	$('.cp_db_num').html(chick);
-	$('.cp_add').html("您还可以继续<br>添加");
-	$('.add-contrast').html("添加对比+");
-}
-
-//资讯 分享	
-$('.ui-icon-share').bind('tap',function(){
-	$('.share-alert-block').addClass('animate');
-	})
-$('.share-alert-block span').bind('tap',function(){
-	$('.share-alert-block').removeClass('animate');
-	})
-//产品
+// JavaScript Document
 $(function(){
-	$('#insur-type,.ui-icon-next').bind('tap',function(){
-		$('.type-selec').show();
-		$('.mm-slider').show();
+	//储蓄分红
+	$('.ins-icon,.ins-inp').click(function(){
+		$('.choice').toggle(); 
 		})
-$('#insur-obj,.ui-icon-next').bind('tap',function(){
-		$('.obj-selec').show();
-		$('.mm-slider').show();
+	$('.choice li').click(function(){
+		$('.choice').hide();
+		var val=$(this).attr('data-value');
+		$('.ins-inp').val(val);
 		})
-$('.selecAll-block .ui-icon-close,.selecAll-block li,.mm-slider').bind('tap',function(){
-		$('.selecAll-block').hide();
-		$('.mm-slider').hide();
+	$('.gender-item').click(function(){
+		$(this).addClass('active');
+		$(this).find('input').attr('checked',true);
+		$(this).siblings('label').removeClass('active');
+		$(this).siblings('label').find('input').attr('checked',false)
 		})
-$('.compair-wrap .ui-icon-close').bind('tap',function(){
-	$('.compair-wrap').hide();
+	$('.tijiao').click(function(){
+		var userName=$('#userName').val();
+		var userTel=$('#userTel').val();
+		var ins=$('#ins-inp').val();
+		var reg= /^[\u4E00-\u9FA5]{2,4}$/;
+		var reg1 = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+		if(userName.length==0){
+			alert("姓名不能为空！");
+			$('#userName').focus();
+			return false;
+			}
+		if(!reg.test(userName)){
+			alert("姓名格式有误！!!!!!");
+			$('#userName').focus();
+			return false;
+			}
+		if(userTel.length==0){
+			alert("手机号不能为空！");
+			$('#userTel').focus();
+			return false;
+			}
+		if(!reg1.test(userTel)){
+			alert("手机号码格式有误！");
+			$('#userTel').focus();
+			return false;
+			}
+		if(ins.length==0){
+			alert("请选择意向险种！");
+			$('#ins-inp').focus();
+			return false;
+			}
+		})
+	//其他专题  3
+	$('.measure,.jsForm').click(function(){
+		var name=$("input[name='iname']").val(),
+		phone=$("input[name='iphone']").val(),
+		regName=/^([\u4e00-\u9fa5]+|([a-z]+\s?)+)$/,
+		regTel=/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+	if(name){
+		if(!regName.test(name)){
+			alert("姓名格式错误！");
+			$("input[name='iname']").focus();
+			return false;
+			}
+		}
+	if(phone){
+		if(!regTel.test(phone)){
+			alert("电话号码格式错误！");
+			$("input[name='iphone']").focus();
+			return false;
+			}
+		}
+		})
+	$('#zjSubmit').click(function(){
+		var name=$(".zName").val(),
+		age=$('.zAge').val(),
+		zNum=$('.zNum').val(),
+		phone=$(".zTel").val(),
+		regName=/^([\u4e00-\u9fa5]+|([a-z]+\s?)+)$/,
+		regTel=/^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/,
+		regNum=/^\+?[1-9][0-9]*$/;//正整数
+		if(name){
+			if(!regName.test(name)){
+				alert("姓名格式错误！");
+				$(".zName").focus();
+				return false;
+				}
+			}
+		if(test){
+			if(!regTel.test(phone)){
+				alert("电话号码格式错误！");
+				$('.zTel').focus();
+				return false;
+				}
+			}
+		if(age){
+			if(!regNum.test(age)){
+			alert("年龄格式有误！");
+			$('.age').focus();
+			return false;
+			}
+			}
+		if(zNum){
+			if(!regNum.test(zNum)){
+			alert("预设保额格式有误！");
+			$('.zNum').focus();
+			return false;
+			}
+			}
 	})
-$('.add-contrast').bind('tap',function(){
-	$('.compair-wrap').show();
-	})
-$('.type-selec li').bind('tap',function(){
-	var vals=$(this).html();
-	$('#insur-type').html(vals);
-	})
-$('.obj-selec li').bind('tap',function(){
-	var vals=$(this).html();
-	$('#insur-obj').html(vals);
-	})
-$('.cpdb-icon-sub .a').click(function(){
-	$('.mm-slider').show();
-	$('.alert-wrap').show();
-	})
-$('.ui-icon-close').click(function(){
-	$('.mm-slider').hide();
-	$('.alert-wrap').hide();
-	})
-$('.plan-info>span').bind('touchend',function(){
-	$(this).addClass('active').siblings('span').removeClass('active');
+		
+			
+			
 	})
 
-})
