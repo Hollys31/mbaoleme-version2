@@ -94,18 +94,34 @@ $('.share-alert-block span').bind('tap',function(){
 	})
 //产品
 $(function(){
-	$('#insur-type,.ui-icon-next').bind('tap',function(){
+$('#insur-type').bind('touchend',function(){
+		$('.pro-alert-wrap').show();
 		$('.type-selec').show();
-		$('.mm-slider').show();
+		$('.obj-selec').hide();
 		})
-$('#insur-obj,.ui-icon-next').bind('tap',function(){
+$('.goods-sort-type .ui-icon-next').eq(0).bind('touchend',function(){
+		$('.pro-alert-wrap').show();
+		$('.type-selec').show();
+		$('.obj-selec').hide();
+	})
+
+$('#insur-obj').bind('touchend',function(){
+		$('.pro-alert-wrap').show();
 		$('.obj-selec').show();
-		$('.mm-slider').show();
+		$('.type-selec').hide();
 		})
-$('.selecAll-block .ui-icon-close,.selecAll-block li,.mm-slider').bind('tap',function(){
-		$('.selecAll-block').hide();
-		$('.mm-slider').hide();
-		})
+$('.goods-sort-type .ui-icon-next').eq(1).bind('touchend',function(){
+		$('.pro-alert-wrap').show();
+		$('.obj-selec').show();
+		$('.type-selec').hide();
+	})
+
+$('.ui-icon-close').bind('touchend',function(){
+		$('.pro-alert-wrap').hide();
+		$('.obj-selec').hide();
+		$('.type-selec').hide();
+	})
+
 $('.compair-wrap .ui-icon-close').bind('tap',function(){
 	$('.compair-wrap').hide();
 	})
@@ -121,13 +137,12 @@ $('.obj-selec li').bind('tap',function(){
 	$('#insur-obj').html(vals);
 	})
 $('.cpdb-icon-sub .a').click(function(){
-	$('.mm-slider').show();
-	$('.alert-wrap').show();
+	$('.compare-alert').show();
 	})
-$('.ui-icon-close').click(function(){
-	$('.mm-slider').hide();
-	$('.alert-wrap').hide();
+$('.compare-alert .ui-icon-close').click(function(){
+	$('.compare-alert').hide();
 	})
+
 $('.plan-info>span').bind('touchend',function(){
 	$(this).addClass('active').siblings('span').removeClass('active');
 	})
