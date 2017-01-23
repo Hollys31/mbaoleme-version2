@@ -153,7 +153,7 @@ footer{ text-align:center; font-size:.85rem; line-height:1.6em; color:#666; padd
 .goods-sort-type.a{ border-bottom:2px solid #dbdbdb;}
 .goods-sort-type i{ font-family:hzins; font-style:normal; font-size:1.6rem; color:#24a59d; margin-right:.8rem;}
 .goods-sort-type i.ui-icon-type{ font-size:2rem; margin-right:.3rem;}
-.goods-sort-type i.ui-icon-next{ font-size:1.2rem; margin-right:0; }
+.goods-sort-type i.ui-icon-next{ font-size:1.2rem; margin-right:0; padding: 0 4%; }
 .goods-sort-type span{ font-size:1.1rem; margin-left:3%;}
 .googs-list{ padding-top:3%; padding-bottom:.1%;}
 .googs-list li{ padding:2% 4%; padding-bottom:0; background:#fff; margin-bottom:3%; border-bottom:2px solid #dbdbdb; color:#717171;}
@@ -164,7 +164,8 @@ footer{ text-align:center; font-size:.85rem; line-height:1.6em; color:#666; padd
 .goods-lis-num{ border-top:1px dashed #dbdbdb; margin-top:3%; color:#f6a913; padding:2%;}
 .goods-lis-num .more{ float:right; border:2px solid #f6a913; border-radius:5px; padding:1% 4%; color:#f6a913; margin-top:.6rem;}
 .goods-lis-num .add-contrast{color:#24a59d; line-height:2rem; font-size:.85rem;}
-.selecAll-block{ display:none; width:100%; max-width:640px; background:#fff; position:fixed; z-index:999; bottom:0; padding:4% 0; padding-top:10%;}
+.pro-alert-wrap{ background-color: rgba(0,0,0,.5); width: 100%; height: 100%; position: fixed; top: 0;  display: none;}
+.selecAll-block{ display:none; width:100%; max-width:640px; background:#fff; position:fixed; z-index:999; bottom:15%; padding:12% 0; padding-top:10%;}
 .selecAll-block ul{ border-top:1px solid #efefef;}
 .selecAll-block li{ height:2.4em; line-height:2.4em; border-bottom:1px solid #efefef; text-align:center; padding:0 5%; color:#717171; font-size:1.1rem;}
 .compair-wrap{max-width:640px; overflow:hidden; border:1px solid #24a59d; z-index:1002; position:fixed; bottom:0; background:#fff; font-size:.95rem; line-height:1.5em; text-align:center; width:100%; display:none;  }
@@ -176,8 +177,9 @@ footer{ text-align:center; font-size:.85rem; line-height:1.6em; color:#666; padd
 .compair-wrap .del{ font-size:.85rem; color:#9f9f9f; line-height:2.2em;}
 .compair-botton{ background:#24a59d; color:#fff; padding:3% 4%; border:none;appearance:none;-webkit-appearance:none;}
 .clear-all{ line-height:2.2em; background:none; border:none; appearance:none;-webkit-appearance:none;}
+.selecAll-block .ui-icon-close{ font-size: 1.3rem; padding: 0 4%;}
 .selecAll-block .ui-icon-close:before{ content:"\F028"; font-family:hzins; font-style:normal;color:#717171;}
-.selecAll-block i{ position:absolute; right:3%; top:4%;}
+.selecAll-block i{ position:absolute; right:9%; top:4%;}
 .pro-img{ width:100%; display: block;}
 .proDetail-wrap{ width:92%; padding:4%; background:#fff; border-bottom:2px solid #dbdbdb; margin-top: 0; text-align: left;}
 .proDetail-wrap .ui-icon-ok{ font-style:normal; color:#53b8b2; font-family:hzins; font-size:1rem;}
@@ -211,7 +213,9 @@ h2.pro-tit img{  margin-right:1rem; max-width:45px;}
 .cpdb-icon-sub a,.cpdb-icon-sub span{ display:block; width:100%; height:2.4em; line-height:2.4em; font-size:1.1rem;border-radius:8px; text-align:center; margin:1rem auto;}
 .cpdb-icon-sub .a{ background:#24a59d; color:#fff; border:1px solid #00736c;}
 .cpdb-icon-sub .b{ background:#efefef; color:#717171; border:1px solid #dbdbdb;}
-.alert-wrap{ z-index:1001; display:none; background:#fff; position:fixed; bottom:30%; width:90%; padding:4% 5%; max-width:640px; text-align:center; color:#717171;}
+.compare-alert{ width: 100%; height: 100%;background-color: rgba(0,0,0,.5); position:fixed;z-index: 1000; top: 0; display: none;}
+.compare-alert .ui-icon-close{ padding: 0 4%;}
+.alert-wrap{ z-index:1001;  background:#fff; position:fixed; bottom:30%; width:90%; padding:4% 5%; max-width:640px; text-align:center; color:#717171;}
 .alert-wrap h2{ position:relative; font-size:1.1rem; font-family:"Microsoft Yahei"; font-weight:normal; line-height:1.5em; margin-bottom:.3rem;}
 .alert-wrap input{ width:60%; padding-left:5%; border:1px solid #efefef; height:2em; line-height:2em; border-radius:2px; appearance:none; -webkit-appearance:none; }
 .alert-wrap .ui-icon-close:before{ color:#717171; position:absolute; right:3%; top:.5rem; font-size:1.2rem;}
@@ -362,6 +366,7 @@ h2.pro-tit img{  margin-right:1rem; max-width:45px;}
 	.alert-wrap h2{ font-size:1rem;}
 	.plan-info>span{ padding:.2rem 8%;}
 	.cpdb-icon-sub .b{ font-size:1rem;}
+	.goods-sort-Tit li a{ font-size: 1rem;}
 	}
 @media screen and (min-width: 640px){
 	.NavBtn span{ margin-top:.8rem;}
